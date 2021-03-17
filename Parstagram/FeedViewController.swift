@@ -45,6 +45,15 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return comments.count + 1
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row != 0 {
+            return 40
+        }
+        
+        return 400
+    }
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return posts.count
     }
